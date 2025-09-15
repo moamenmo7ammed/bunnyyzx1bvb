@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface PricingCardProps {
   name: string;
@@ -12,6 +13,7 @@ interface PricingCardProps {
 }
 
 const PricingCard = ({ name, price, period, isPopular, features, description, originalPrice }: PricingCardProps) => {
+  const navigate = useNavigate();
   return (
     <div className={`relative p-8 rounded-2xl border transition-all duration-300 hover:scale-105 ${
       isPopular 
@@ -65,7 +67,7 @@ const PricingCard = ({ name, price, period, isPopular, features, description, or
             price: price.toString(),
             period: period
           });
-          window.location.href = `/checkout?${params.toString()}`;
+          navigate(`/checkout?${params.toString()}`);
         }}
       >
         Get Started

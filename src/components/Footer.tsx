@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand section */}
           <div className="space-y-4">
-            <img src="/logo.svg" alt="Logo" className="w-[500px] h-[500px]" />
+            <img src="/logo.svg" alt="Logo" className="w-16 h-16" />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Lightning-fast video hosting platform built specifically for developers.
               Secure, scalable, and enterprise-ready.
